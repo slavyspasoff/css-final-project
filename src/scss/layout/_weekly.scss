@@ -13,9 +13,16 @@
     flex-wrap: wrap;
     .item-name {
       flex-basis: 80%;
+      font-family: v.$font-secondary;
+      font-weight: 600;
     }
     .item-price {
       flex-basis: 20%;
+    }
+    .item-ingredient {
+      max-width: 75%;
+      margin-block: 0.75em;
+      font-style: italic;
     }
   }
 }

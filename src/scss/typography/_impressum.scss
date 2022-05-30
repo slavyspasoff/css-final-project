@@ -1,0 +1,19 @@
+@use '../utils/variables' as v;
+
+#impressum {
+  color: v.$clr-light-900;
+  h2 {
+    text-align: center;
+    font-size: clamp(2rem, 10vw, 7rem);
+  }
+  .impressum-article {
+    h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .open-date {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+  }
+}

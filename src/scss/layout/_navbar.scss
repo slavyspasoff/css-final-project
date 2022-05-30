@@ -5,6 +5,7 @@ nav {
   background-color: v.$clr-dark-900;
   position: sticky;
   top: 0;
+  z-index: 999;
   padding: 1rem 2rem;
   img {
     height: 5rem;
@@ -20,6 +21,11 @@ nav {
       position: absolute;
       left: 0;
       top: 6rem;
+      a,
+      a:visited,
+      a:active {
+        color: v.$clr-light-900;
+      }
     }
     input[type='checkbox']:checked ~ ul {
       display: flex;

@@ -22,7 +22,9 @@ ul {
   list-style: none;
 }
 
-a {
+a,
+a:visited,
+a:active {
   text-decoration: none;
 }
 
@@ -51,6 +53,19 @@ header #header-text-container h2 {
   font-size: clamp(1.5rem, 7.5vw, 7rem);
 }
 
+.feature-article {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+.feature-article h3 {
+  font-size: 2.75rem;
+  font-family: "Overlock SC", cursive;
+}
+.feature-article p {
+  font-size: 1.5rem;
+  font-family: "Overlock SC", cursive;
+}
+
 #weekly h2 {
   font-size: clamp(2rem, 10vw, 7rem);
   text-align: center;
@@ -64,8 +79,38 @@ header #header-text-container h2 {
   text-align: center;
   font-size: clamp(2rem, 10vw, 7rem);
 }
+#reservation form select,
+#reservation form input {
+  font-size: 1.75rem;
+}
+#reservation form textarea,
+#reservation form input[type=datetime-local] {
+  font-size: 1.5;
+}
 #reservation form label {
   font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+#reservation form button {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#impressum {
+  color: rgb(255, 255, 255);
+}
+#impressum h2 {
+  text-align: center;
+  font-size: clamp(2rem, 10vw, 7rem);
+}
+#impressum .impressum-article h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+#impressum .impressum-article .open-date {
+  font-size: 1.15rem;
   font-weight: 600;
 }
 
@@ -75,6 +120,7 @@ nav {
   background-color: rgb(0, 0, 0);
   position: sticky;
   top: 0;
+  z-index: 999;
   padding: 1rem 2rem;
 }
 nav img {
@@ -90,6 +136,11 @@ nav #nav-container-right ul {
   position: absolute;
   left: 0;
   top: 6rem;
+}
+nav #nav-container-right ul a,
+nav #nav-container-right ul a:visited,
+nav #nav-container-right ul a:active {
+  color: rgb(255, 255, 255);
 }
 nav #nav-container-right input[type=checkbox]:checked ~ ul {
   display: flex;
@@ -114,21 +165,35 @@ header #header-text-container {
   text-align: center;
 }
 
-#feature article {
+#feature .feature-article {
   display: flex;
+  padding-inline: 5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-inline: 15vh 3rem;
-  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 50%;
-  height: 50vh;
+  height: 65vh;
   aspect-ratio: 1/1;
-  transform: translateX(-20%);
-  margin-block: 5vh;
+  position: relative;
+  z-index: 1;
 }
-#feature article h3 {
+#feature .feature-article::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  z-index: 2;
+}
+#feature .feature-article h3 {
   margin-bottom: 2rem;
+  z-index: 99;
+}
+#feature .feature-article p {
+  z-index: 99;
 }
 #feature #feature-image-container {
   padding: 3vh;
@@ -136,6 +201,26 @@ header #header-text-container {
 #feature #feature-image-container img {
   width: 100%;
   margin-bottom: 3rem;
+}
+#feature article:nth-of-type(1) {
+  background-image: url(../../images/Ancient-Egyptian-Food.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  margin-top: 5vh;
+}
+#feature article:nth-of-type(2) {
+  background-image: url(../../images/7c2a3222a5ec2ccd74447d849a5f37ac.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#feature article:nth-of-type(3) {
+  background-image: url(../../images/food-of-the-ancient-egypt-8.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  margin-bottom: 5vh;
+}
+#feature article:nth-of-type(2) {
+  margin-inline: auto 0;
 }
 
 #weekly {
@@ -152,23 +237,87 @@ header #header-text-container {
 }
 #weekly .menu-item .item-name {
   flex-basis: 80%;
+  font-family: "Overlock SC", cursive;
+  font-weight: 600;
 }
 #weekly .menu-item .item-price {
   flex-basis: 20%;
 }
+#weekly .menu-item .item-ingredient {
+  max-width: 75%;
+  margin-block: 0.75em;
+  font-style: italic;
+}
 
 #reservation {
+  max-width: 720px;
+  margin-inline: auto;
   padding: 2rem;
 }
 #reservation form {
   display: flex;
   flex-direction: column;
 }
+#reservation form input,
+#reservation form select,
+#reservation form textarea {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  outline: none;
+  padding: 0.25rem 0.5rem;
+}
+#reservation form input:focus,
+#reservation form select:focus,
+#reservation form textarea:focus {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+}
 #reservation form label {
-  margin-block: 0.75rem;
+  margin-block: 1.25rem 0.75rem;
+}
+#reservation form textarea {
+  margin-bottom: 3rem;
+  resize: none;
 }
 #reservation form button {
-  margin-top: 1rem;
+  padding: 1rem 2rem;
+  width: 50%;
+  background-color: transparent;
+  margin-inline: auto;
+}
+
+#impressum {
+  background-color: rgb(0, 0, 0);
+}
+#impressum #inprint-container {
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#impressum #inprint-container h2 {
+  flex-basis: 100%;
+  margin-bottom: 2rem;
+}
+#impressum #inprint-container article {
+  flex-basis: 50%;
+  padding: 2rem;
+}
+#impressum #inprint-container article h3,
+#impressum #inprint-container article p {
+  margin-block: 0.5rem;
+}
+
+footer {
+  background-color: rgb(0, 0, 0);
+  padding: 2rem 5rem;
+}
+footer #footer-logo-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+}
+footer #footer-logo-container img {
+  width: 5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

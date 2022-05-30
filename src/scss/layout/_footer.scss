@@ -1,0 +1,14 @@
+@use '../utils/variables' as v;
+
+footer {
+  background-color: v.$clr-dark-900;
+  padding: 2rem 5rem;
+  #footer-logo-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    img {
+      width: 5rem;
+    }
+  }
+}

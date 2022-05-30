@@ -1,12 +1,29 @@
+@use '../utils/variables' as v;
+
 #reservation {
   h2 {
     text-align: center;
     font-size: clamp(2rem, 10vw, 7rem);
   }
   form {
+    select,
+    input {
+      font-size: 1.75rem;
+    }
+
+    textarea,
+    input[type='datetime-local'] {
+      font-size: 1.5;
+    }
     label {
       font-size: 1.5rem;
       font-weight: 600;
+      color: v.$clr-dark-600;
+    }
+    button {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: v.$clr-dark-600;
     }
   }
 }
