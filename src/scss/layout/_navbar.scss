@@ -1,0 +1,32 @@
+@use '../utils/variables' as v;
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: v.$clr-dark-900;
+  position: sticky;
+  top: 0;
+  padding: 1rem 2rem;
+  img {
+    height: 5rem;
+    border-radius: 50%;
+  }
+  #nav-container-right {
+    input[type='checkbox'] {
+      margin-right: auto;
+      appearance: none;
+    }
+    ul {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 6rem;
+    }
+    input[type='checkbox']:checked ~ ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 3rem;
+      width: 100%;
+      background-color: v.$clr-dark-900;
+    }
+  }
+}

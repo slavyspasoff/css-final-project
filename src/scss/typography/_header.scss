@@ -1,0 +1,16 @@
+@use '../utils/variables' as v;
+header {
+  #header-text-container {
+    h1,
+    h2 {
+      font-family: v.$font-secondary;
+      color: v.$clr-light-900;
+    }
+    h1 {
+      font-size: clamp(2rem, 10vw, 10rem);
+    }
+    h2 {
+      font-size: clamp(1.5rem, 7.5vw, 7rem);
+    }
+  }
+}

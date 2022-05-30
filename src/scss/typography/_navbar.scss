@@ -1,0 +1,20 @@
+@use '../utils/variables' as v;
+nav {
+  #nav-container-right {
+    input[type='checkbox'] {
+      &::after {
+        font: var(--fa-font-solid);
+        content: '\f0c9';
+        color: v.$clr-light-900;
+        font-size: 3rem;
+        line-height: 5rem;
+      }
+    }
+
+    input[type='checkbox']:checked ~ ul {
+      color: v.$clr-light-900;
+      font-size: 1.75rem;
+      font-family: v.$font-secondary;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+#reservation {
+  padding: 2rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    label {
+      margin-block: 0.75rem;
+    }
+    button {
+      margin-top: 1rem;
+    }
+  }
+}

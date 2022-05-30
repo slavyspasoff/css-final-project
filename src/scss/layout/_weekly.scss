@@ -1,0 +1,21 @@
+@use '../utils/variables' as v;
+
+#weekly {
+  background-color: v.$clr-bg-accent-400;
+  padding: 5rem 2rem;
+  margin-inline: 2rem;
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+  .menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    .item-name {
+      flex-basis: 80%;
+    }
+    .item-price {
+      flex-basis: 20%;
+    }
+  }
+}

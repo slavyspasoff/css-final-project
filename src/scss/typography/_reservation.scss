@@ -1,0 +1,12 @@
+#reservation {
+  h2 {
+    text-align: center;
+    font-size: clamp(2rem, 10vw, 7rem);
+  }
+  form {
+    label {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+}

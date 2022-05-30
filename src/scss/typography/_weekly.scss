@@ -1,0 +1,12 @@
+#weekly {
+  h2 {
+    font-size: clamp(2rem, 10vw, 7rem);
+    text-align: center;
+  }
+  .menu-item {
+    .item-name,
+    .item-price {
+      font-size: 2rem;
+    }
+  }
+}
