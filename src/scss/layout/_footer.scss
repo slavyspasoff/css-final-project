@@ -1,7 +1,7 @@
 @use '../utils/variables' as v;
 
 footer {
-  #inprint-container {
+  #imprint-container {
     display: flex;
     flex-wrap: wrap;
 
@@ -18,7 +18,7 @@ footer {
       }
     }
   }
-  background-color: v.$clr-dark-900;
+  background-color: v.$clr-bg-accent-dark-900;
   padding: 2rem 5rem;
   #footer-logo-container {
     display: flex;

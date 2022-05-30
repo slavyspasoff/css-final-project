@@ -2,7 +2,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: v.$clr-dark-900;
+  background-color: v.$clr-bg-accent-dark-900;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -32,7 +32,20 @@ nav {
       justify-content: space-between;
       padding: 1rem 3rem;
       width: 100%;
-      background-color: v.$clr-dark-900;
+      background-color: v.$clr-bg-accent-dark-900;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 40%;
+      input[type='checkbox'] {
+        display: none;
+      }
+      ul {
+        display: flex;
+        height: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        position: static;
+      }
     }
   }
 }
