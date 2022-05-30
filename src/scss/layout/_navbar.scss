@@ -35,4 +35,15 @@ nav {
       background-color: v.$clr-dark-900;
     }
   }
+  @media screen and (min-width: 1200px) {
+    input[type='checkbox'] {
+      display: none;
+    }
+    #nav-container-right {
+      ul {
+        display: block;
+        position: relative;
+      }
+    }
+  }
 }

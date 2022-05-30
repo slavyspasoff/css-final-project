@@ -149,6 +149,15 @@ nav #nav-container-right input[type=checkbox]:checked ~ ul {
   width: 100%;
   background-color: rgb(0, 0, 0);
 }
+@media screen and (min-width: 1200px) {
+  nav input[type=checkbox] {
+    display: none;
+  }
+  nav #nav-container-right ul {
+    display: block;
+    position: relative;
+  }
+}
 
 header {
   background-image: url(../../images/photo-1578474846511-04ba529f0b88.jpeg);
@@ -247,6 +256,17 @@ header #header-text-container {
   max-width: 75%;
   margin-block: 0.75em;
   font-style: italic;
+}
+@media screen and (min-width: 768px) {
+  #weekly {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #weekly h2 {
+    grid-column: 1/span 2;
+  }
 }
 
 #reservation {
