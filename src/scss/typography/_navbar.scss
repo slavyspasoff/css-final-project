@@ -16,6 +16,13 @@ nav {
       font-size: 1.75rem;
       font-family: v.$font-secondary;
     }
+    ul {
+      li {
+        a {
+          font-size: clamp(1.25rem, 3.75vw, 2rem);
+        }
+      }
+    }
     @media screen and (min-width: 1200px) {
       ul {
         li {

@@ -15,4 +15,12 @@ footer {
       font-weight: 600;
     }
   }
+  #footer-logo-container {
+    .footer-img-container {
+      span {
+        font-family: v.$font-secondary;
+        font-size: 1.55rem;
+      }
+    }
+  }
 }
