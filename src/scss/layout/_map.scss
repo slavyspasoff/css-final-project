@@ -1,0 +1,20 @@
+#map-container {
+  display: flex;
+  padding: 2rem;
+  max-width: 920px;
+  margin: 5rem auto;
+
+  iframe {
+    display: block;
+    outline: none;
+    border: none;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+  }
+  @media screen and (min-width: 768px) {
+    margin-block: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-block: 12.5rem;
+  }
+}
