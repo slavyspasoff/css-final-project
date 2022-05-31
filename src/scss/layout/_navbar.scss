@@ -5,7 +5,7 @@ nav {
   background-color: v.$clr-bg-accent-dark-900;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 9;
   padding: 1rem 2rem;
   img {
     height: 5rem;
@@ -20,16 +20,22 @@ nav {
       display: none;
       position: absolute;
       left: 0;
-      top: 6rem;
+      top: 6.5rem;
+      z-index: 2;
+
       a,
       a:visited,
       a:active {
         color: v.$clr-light-900;
       }
+      @media screen and (max-width: 1200px) {
+        opacity: 0;
+        animation: navbar_fade 0.5s forwards;
+      }
     }
     input[type='checkbox']:checked ~ ul {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       padding: 1rem 3rem;
       width: 100%;
       background-color: v.$clr-bg-accent-dark-900;
@@ -38,6 +44,7 @@ nav {
       width: 40%;
       input[type='checkbox'] {
         display: none;
+        justify-content: space-between;
       }
       ul {
         display: flex;

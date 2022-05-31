@@ -19,12 +19,25 @@ footer {
     }
   }
   background-color: v.$clr-bg-accent-dark-900;
-  padding: 2rem 5rem;
+  padding-block: 2rem;
   #footer-logo-container {
     display: flex;
-    justify-content: space-between;
-    img {
-      width: 5rem;
+    justify-content: space-evenly;
+    padding-top: 3rem;
+    .footer-img-container {
+      display: flex;
+      align-items: center;
+      img {
+        width: 3rem;
+        aspect-ratio: 1/1;
+        margin-right: 1rem;
+      }
+      span {
+        display: none;
+        @media screen and (min-width: 768px) {
+          display: inline-block;
+        }
+      }
     }
   }
   @media screen and (min-width: 768px) {

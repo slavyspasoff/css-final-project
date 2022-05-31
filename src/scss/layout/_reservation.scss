@@ -2,7 +2,8 @@
 #reservation {
   max-width: 720px;
   margin-inline: auto;
-  padding: 2rem;
+  margin-block: 5rem;
+  padding-inline: 2rem;
   form {
     display: flex;
     flex-direction: column;
@@ -21,7 +22,7 @@
       border-bottom: 2px solid v.$clr-dark-600;
     }
     label {
-      margin-block: 1.25rem 0.75rem;
+      margin-block: 5rem 0.75rem;
     }
 
     textarea {
@@ -33,6 +34,16 @@
       width: 50%;
       background-color: transparent;
       margin-inline: auto;
+      &:hover {
+        transition: transform 0.15s;
+        transform: scale(1.015);
+      }
     }
+  }
+  @media screen and (min-width: 768px) {
+    margin-block: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-block: 12.5rem;
   }
 }
