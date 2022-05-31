@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@keyframes navbar_fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes feature_article_scale_p {
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes feature_article_scale_h3 {
+  100% {
+    transform: scale(1.25);
+  }
+}
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  max-width: 100vw;
+  min-height: 100vh;
+  cursor: url('../images/output-onlinepngtools.png'), auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+nav #nav-container-right input[type='checkbox']::after {
+  font: var(--fa-font-solid);
+  content: '\f0c9';
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  line-height: 5rem;
+}
+nav #nav-container-right input[type='checkbox']:checked ~ ul {
+  color: rgb(255, 255, 255);
+  font-size: 1.75rem;
+  font-family: 'Overlock SC', cursive;
+}
+nav #nav-container-right ul li a {
+  font-size: clamp(1.25rem, 3.75vw, 2rem);
+}
+@media screen and (min-width: 1200px) {
+  nav #nav-container-right ul li a {
+    font-size: 2rem;
+  }
+}
+
+header #header-text-container h1,
+header #header-text-container h2 {
+  font-family: 'Overlock SC', cursive;
+  color: rgb(255, 255, 255);
+}
+header #header-text-container h1 {
+  font-size: clamp(2rem, 10vw, 10rem);
+}
+header #header-text-container h2 {
+  font-size: clamp(1.5rem, 7.5vw, 7rem);
+}
+
+.feature-article {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+.feature-article h3 {
+  font-size: 2.75rem;
+  font-family: 'Overlock SC', cursive;
+}
+.feature-article p {
+  font-size: 1.5rem;
+  font-family: 'Overlock SC', cursive;
+}
+
+#weekly h2 {
+  font-size: clamp(2rem, 10vw, 7rem);
+  text-align: center;
+}
+#weekly .menu-item .item-name,
+#weekly .menu-item .item-price {
+  font-size: 2rem;
+}
+
+#reservation h2 {
+  text-align: center;
+  font-size: clamp(2rem, 10vw, 7rem);
+}
+#reservation form select,
+#reservation form input {
+  font-size: 1.75rem;
+}
+#reservation form textarea,
+#reservation form input[type='datetime-local'] {
+  font-size: 1.5;
+}
+#reservation form label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+#reservation form button {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+footer {
+  color: rgb(255, 255, 255);
+}
+footer h2 {
+  text-align: center;
+  font-size: clamp(2rem, 10vw, 7rem);
+}
+footer .imprint-article h3 {
+  font-size: 2rem;
+  font-family: 'Overlock SC', cursive;
+  margin-bottom: 1rem;
+}
+footer .imprint-article .open-date,
+footer .imprint-article .location-item {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+footer .imprint-article .open-time {
+  font-size: 1.15rem;
+}
+footer #footer-logo-container .footer-img-container span {
+  font-family: 'Overlock SC', cursive;
+  font-size: 1.55rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(42, 40, 41);
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  padding: 1rem 2rem;
+}
+nav img {
+  height: 5rem;
+  border-radius: 50%;
+}
+nav #nav-container-right #useless-label {
+  font-size: 0;
+}
+nav #nav-container-right input[type='checkbox'] {
+  margin-right: auto;
+  appearance: none;
+}
+nav #nav-container-right ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 6.5rem;
+  z-index: 2;
+}
+nav #nav-container-right ul a,
+nav #nav-container-right ul a:visited,
+nav #nav-container-right ul a:active {
+  color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 1200px) {
+  nav #nav-container-right ul {
+    opacity: 0;
+    animation: navbar_fade 0.5s forwards;
+  }
+}
+nav #nav-container-right input[type='checkbox']:checked ~ ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 3rem;
+  width: 100%;
+  background-color: rgb(42, 40, 41);
+}
+@media screen and (min-width: 1200px) {
+  nav #nav-container-right {
+    width: 40%;
+  }
+  nav #nav-container-right input[type='checkbox'] {
+    display: none;
+    justify-content: space-between;
+  }
+  nav #nav-container-right ul {
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    position: static;
+  }
+}
+
+header {
+  background-image: url(../images/25/header-image-1-25.webp);
+  height: 95vh;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+header #header-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  text-align: center;
+}
+
+#feature #feature-article-container {
+  max-width: 100%;
+  margin-block: 3rem;
+  overflow: hidden;
+}
+#feature #feature-article-container .feature-article {
+  display: flex;
+  padding-inline: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 40rem;
+  aspect-ratio: 1/1;
+  position: relative;
+  z-index: 1;
+}
+#feature #feature-article-container .feature-article::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 50%;
+  z-index: 2;
+}
+#feature #feature-article-container .feature-article:hover > p {
+  animation: feature_article_scale_p 1s forwards;
+}
+#feature #feature-article-container .feature-article:hover > h3 {
+  animation: feature_article_scale_h3 1s forwards;
+}
+#feature #feature-article-container .feature-article h3 {
+  margin-bottom: 2rem;
+  z-index: 3;
+}
+#feature #feature-article-container .feature-article p {
+  z-index: 3;
+}
+#feature #feature-article-container article:nth-of-type(1) {
+  background-image: url(../images/article-image-1-original.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#feature #feature-article-container article:nth-of-type(2) {
+  background-image: url(../images/article-image-2-original.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#feature #feature-article-container article:nth-of-type(3) {
+  background-image: url(../images/article-image-3-original.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  #feature #feature-article-container article:nth-of-type(1),
+  #feature #feature-article-container article:nth-of-type(3) {
+    padding-left: 10rem;
+    transform: translateX(-20%);
+  }
+  #feature #feature-article-container article:nth-of-type(2) {
+    transform: translateX(20%) translateY(-5%);
+    padding-inline: 8rem 10rem;
+    margin-inline: auto 0;
+  }
+  #feature #feature-article-container article:nth-of-type(3) {
+    transform: translateX(-20%) translateY(-10%);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  #feature #feature-article-container article:nth-of-type(1),
+  #feature #feature-article-container article:nth-of-type(3) {
+    padding-left: 10rem;
+    transform: translateX(-20%);
+  }
+  #feature #feature-article-container article:nth-of-type(2) {
+    transform: translateX(0) translateY(0);
+    padding-inline: 8rem;
+    margin-inline: auto;
+  }
+  #feature #feature-article-container article:nth-of-type(3) {
+    transform: translateX(20%) translateY(0);
+    padding-inline: 5rem 10rem;
+    margin-inline: auto 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #feature #feature-article-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+    margin-block: 7.5rem;
+  }
+  #feature #feature-article-container .feature-article {
+    padding-inline: 8rem;
+  }
+}
+#feature #feature-image-container {
+  padding: 3vh;
+}
+#feature #feature-image-container img {
+  margin-inline: auto;
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 3rem;
+  aspect-ratio: 1.5/1;
+  object-fit: cover;
+}
+
+#weekly {
+  background-color: rgb(253, 238, 183);
+  padding: 5rem 2rem;
+  margin-inline: 2rem;
+}
+#weekly h2 {
+  margin-bottom: 3rem;
+}
+#weekly .menu-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+#weekly .menu-item .item-name {
+  flex-basis: 80%;
+  font-family: 'Overlock SC', cursive;
+  font-weight: 600;
+}
+#weekly .menu-item .item-price {
+  flex-basis: 20%;
+}
+#weekly .menu-item .item-ingredient {
+  max-width: 75%;
+  margin-block: 0.75em;
+  font-style: italic;
+}
+@media screen and (min-width: 768px) {
+  #weekly {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #weekly h2 {
+    grid-column: 1 / span 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #weekly {
+    margin-inline: auto;
+  }
+}
+
+#reservation {
+  max-width: 720px;
+  margin-inline: auto;
+  margin-block: 5rem;
+  padding-inline: 2rem;
+}
+#reservation form {
+  display: flex;
+  flex-direction: column;
+}
+#reservation form input,
+#reservation form select,
+#reservation form textarea {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  outline: none;
+  padding: 0.25rem 0.5rem;
+}
+#reservation form input:focus,
+#reservation form select:focus,
+#reservation form textarea:focus {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+}
+#reservation form label {
+  margin-block: 5rem 0.75rem;
+}
+#reservation form textarea {
+  margin-bottom: 3rem;
+  resize: none;
+}
+#reservation form button {
+  padding: 1rem 2rem;
+  width: 50%;
+  background-color: transparent;
+  margin-inline: auto;
+}
+#reservation form button:hover {
+  transition: transform 0.15s;
+  transform: scale(1.015);
+}
+@media screen and (min-width: 768px) {
+  #reservation {
+    margin-block: 10rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #reservation {
+    margin-block: 12.5rem;
+  }
+}
+
+footer {
+  background-color: rgb(42, 40, 41);
+  padding-block: 2rem;
+}
+footer #imprint-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer #imprint-container h2 {
+  flex-basis: 100%;
+  margin-bottom: 2rem;
+}
+footer #imprint-container article {
+  flex-basis: 50%;
+  padding: 2rem;
+}
+footer #imprint-container article h3,
+footer #imprint-container article p {
+  margin-block: 0.5rem;
+}
+footer #footer-logo-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 3rem;
+}
+footer #footer-logo-container .footer-img-container {
+  display: flex;
+  align-items: center;
+}
+footer #footer-logo-container .footer-img-container img {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  margin-right: 1rem;
+}
+footer #footer-logo-container .footer-img-container span {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  footer #footer-logo-container .footer-img-container span {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  footer #footer-logo-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer #footer-logo-container > * {
+    flex-basis: 100%;
+  }
+}
+
+#map-container {
+  display: flex;
+  padding: 2rem;
+  max-width: 920px;
+  margin: 5rem auto;
+}
+#map-container iframe {
+  display: block;
+  outline: none;
+  border: none;
+  width: 100%;
+  aspect-ratio: 2/1;
+}
+@media screen and (min-width: 768px) {
+  #map-container {
+    margin-block: 10rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #map-container {
+    margin-block: 12.5rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
