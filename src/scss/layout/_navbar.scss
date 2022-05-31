@@ -12,6 +12,9 @@ nav {
     border-radius: 50%;
   }
   #nav-container-right {
+    #useless-label {
+      font-size: 0;
+    }
     input[type='checkbox'] {
       margin-right: auto;
       appearance: none;

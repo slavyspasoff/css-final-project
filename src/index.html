@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Little Pharaoh.">
+  <meta name="author" content="Romina Lubjuhn, Ahmed Omar, Slavy Spasoff">
+  <meta name="keywords" content="the little pharaoh restaurant Egypt">
   <!-- FONT AWESOME CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -18,8 +21,9 @@
   <main>
     <!-- ----------------------- NAVBAR ----------------------- -->
     <nav>
-      <a href="#top"><img src="./images/NicePng_pharaoh-png_1893787.png" alt="restaurant-logo" /></a>
+      <a href="#top"><img src="./images/25/logo-image-25.png" alt="restaurant-logo" /></a>
       <div id="nav-container-right">
+        <label for="hamburger-menu-toggler" id="useless-label">Hamburger Menu</label>
         <input type="checkbox" name="hamburger-menu-toggler" id="hamburger-menu-toggler" />
         <ul>
           <li><a href="#feature">Features</a></li>
@@ -32,7 +36,7 @@
     <!-- ----------------------- HEADER ----------------------- -->
     <header id="top">
       <div id="header-text-container">
-        <h1 >Restaurant Little Pharaoh</h1>
+        <h1>Restaurant Little Pharaoh</h1>
         <h2>Taste the ancient</h2>
       </div>
     </header>
@@ -70,9 +74,18 @@
         </article>
       </div>
       <div id="feature-image-container">
-        <img src="./images/photo-1551218808-94e220e084d2.jpeg" alt="a man cutting ingredients on a board" />
-        <img src="./images/photo-1414235077428-338989a2e8c0.jpeg" alt="foot on a plate" />
-        <img src="./images/basma-dorgham-kq-J_x0bN5A-unsplash.jpg" loading="lazy" alt="foot on a plate" />
+        <picture>
+          <source media="(min-width: 768px)" srcset="../images/25/feature-image-1-25.webp">
+          <img src="./images/12/feature-image-1-12.webp" alt="a man cutting ingredients on a board" />
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" srcset="../images/25/feature-image-2-25.webp">
+          <img src="./images/12/feature-image-2-12.webp" alt="a man cutting ingredients on a board" />
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" srcset="../images/25/feature-image-3-25.webp">
+          <img src="./images/12/feature-image-3-12.webp" alt="a man cutting ingredients on a board" />
+        </picture>
       </div>
     </section>
     <!-- ----------------------- WEEKLY ----------------------- -->
@@ -82,9 +95,7 @@
         <p class="item-name">Kushari</p>
         <p class="item-price">8€</p>
         <div class="item-ingredients-container">
-          <p class="item-ingredient">A mix of rice</p>
-          <p class="item-ingredient">spaghetti</p>
-          <p class="item-ingredient">black lentils</p>
+          <p class="item-ingredient">A mix of rice, spaghetti, black lentils</p>
           <p class="item-ingredient">
             thick tomato sauce, garlic and vinegar sauce
           </p>
@@ -224,23 +235,23 @@
     <!-- ----------------------- MAP ----------------------- -->
 
     <div id='map-container'>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38900.60599593561!2d13.336767336734127!3d52.4558137085013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84fba0ce91f13%3A0x8d9de1b8d168b626!2sRestaurant%20Amira!5e0!3m2!1sen!2sde!4v1653988333314!5m2!1sen!2sde"
-               allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78497.31755101014!2d6.728794756362268!3d52.060773942593535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b86e8b661009ef%3A0x427f28131547f30!2s48691%20Vreden!5e0!3m2!1sen!2sde!4v1653996510995!5m2!1sen!2sde"
+        loading="lazy" title="a google map showing the restaurant location"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
     <!-- ----------------------- FOOTER ----------------------- -->
     <footer id="imprint">
       <div id="imprint-container">
         <article class="imprint-article">
           <div id="location-container">
             <h3>Location</h3>
-            <p>Berlin</p>
-            <p>Somestr. 119</p>
-            <p>10399</p>
-            <p>0992 - 0123 132 111</p>
+            <p class="location-item" id="location-city">Vreden</p>
+            <p class="location-item" id="location-street">Lappenbrink 12</p>
+            <p class="location-item" id="location-pobox">48691</p>
+            <p class="location-item" id="location-tel">0992 - 0123 132 111</p>
           </div>
-        
+
         </article>
         <article class="imprint-article">
           <h3>Opening times</h3>
@@ -254,19 +265,20 @@
       </div>
       <div id="footer-logo-container">
         <div class="footer-img-container">
-          <img src="./images/facebook.png" alt="facebook logo" />
+          <img src="./images/25/facebook-25.png" alt="facebook logo" />
           <span>@littlepharaoh</span>
         </div>
         <div class="footer-img-container">
-          <img src="./images/instagram.png" alt="instagram logo" />
+          <img src="./images/25/instagram-25.png" alt="instagram logo" />
           <span>@littlepharaoh</span>
         </div>
         <div class="footer-img-container">
-          <img src="./images/twitter.png" alt="twitter logo" />
+          <img src="./images/25/twitter-25.png" alt="twitter logo" />
           <span>@littlepharaoh</span>
         </div>
       </div>
     </footer>
   </main>
 </body>
+
 </html>

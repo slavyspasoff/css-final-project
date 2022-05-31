@@ -11,6 +11,7 @@
   .menu-item {
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     .item-name {
       flex-basis: 80%;
       font-family: v.$font-secondary;
